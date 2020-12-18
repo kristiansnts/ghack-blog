@@ -26,7 +26,7 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 // Use UTF-8
 $db->EXECUTE("set names 'utf8'"); 
 
-echo "<b>First 10 rows</b><br />";
+echo "<b>First 10 row</b><br />";
 
 $sql = 'SELECT * FROM `raffles-pdf` LIMIT 10';
 
