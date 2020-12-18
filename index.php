@@ -13,6 +13,14 @@ echo '<pre>';
 print_r($cleardb_url);
 echo '</pre>';
 
+$connect = mysqli_connect(
+	$cleardb_server,
+	$cleardb_username,
+	$cleardb_password,
+	$cleardb_db  ) or die(mysqli_error($connect));
+
+
+/*
 $db = NewADOConnection('mysqli');
 $db->Connect(
 	$cleardb_server,
@@ -25,7 +33,7 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 
 // Use UTF-8
 $db->EXECUTE("set names 'utf8'"); 
-
+*/
 echo "<b>First 10 row</b><br />";
 
 $sql = 'SELECT * FROM `raffles-pdf` LIMIT 10';
