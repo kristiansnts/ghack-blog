@@ -34,11 +34,13 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 // Use UTF-8
 $db->EXECUTE("set names 'utf8'"); 
 */
+
+$sql = mysqli_query($connect, "SELECT * FROM `raffles-pdf` LIMIT 10");
+$result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+
 echo "<b>First 10 row</b><br />";
 
-$sql = 'SELECT * FROM `raffles-pdf` LIMIT 10';
-
-$result = $db->Execute($sql);
+// $result = $db->Execute($sql);
 if ($result == false) die("failed [" . __LINE__ . "]: " . $sql);
 
 while (!$result->EOF) 
